@@ -11,6 +11,6 @@ var sponsor = process.env.SPONSOR || "unsponsored";
 app.listen(3000, () =>
   console.log(
     "Tetris app listening on port 3000! Brought to you by",
-    sponsor + ", of course. Stefan was here.."
+    sponsor + ", of course. Stefan was here."
   )
 );
