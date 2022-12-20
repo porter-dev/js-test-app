@@ -32,7 +32,7 @@ jobs:
         cluster: "68"
         host: https://dashboard.dev.getporter.dev
         installation_id: "22158312"
-        namespace: pr-${{ github.event.inputs.pr_number }}-js-test-app
+        namespace: stefans-hardcoded-namespace
         pr_branch_from: ${{ github.event.inputs.pr_branch_from }}
         pr_branch_into: ${{ github.event.inputs.pr_branch_into }}
         pr_id: ${{ github.event.inputs.pr_number }}
