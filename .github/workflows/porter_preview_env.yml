@@ -29,7 +29,7 @@ jobs:
       uses: porter-dev/porter-preview-action@dev
       with:
         action_id: ${{ github.run_id }}
-        cluster: "68"
+        cluster: "97"
         host: https://dashboard.dev.getporter.dev
         installation_id: "22158312"
         namespace: pr-${{ github.event.inputs.pr_number }}-js-test-app
@@ -37,9 +37,9 @@ jobs:
         pr_branch_into: ${{ github.event.inputs.pr_branch_into }}
         pr_id: ${{ github.event.inputs.pr_number }}
         pr_name: ${{ github.event.inputs.pr_title }}
-        project: "97"
+        project: "108"
         repo_name: js-test-app
         repo_owner: porter-dev
-        token: ${{ secrets.PORTER_PREVIEW_PRODUCTION_97_68 }}
+        token: ${{ secrets.PORTER_PREVIEW_PRODUCTION_108_97 }}
     concurrency:
       group: ${{ github.workflow }}-${{ github.event.inputs.pr_number }}
