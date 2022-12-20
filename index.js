@@ -1,11 +1,16 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-app.get('/', (req, res) => {
-    res.send('Tetris time.');
+app.get("/", (req, res) => {
+  res.send("Tetris time.");
 });
 
 var sponsor = process.env.SPONSOR || "unsponsored";
-app.listen(3000, () => console.log('Tetris app listening on port 3000! Brought to you by', sponsor + ", of course."));
+app.listen(3000, () =>
+  console.log(
+    "Tetris app listening on port 3000! Brought to you by",
+    sponsor + ", of course. Stefan was here"
+  )
+);
