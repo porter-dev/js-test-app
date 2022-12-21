@@ -9,7 +9,7 @@ resources:
       builder: heroku/buildpacks:20
     values:
       ingress:
-        enabled: true
+        enabled: false
       container:
         command: node index.js
         port: 3000
