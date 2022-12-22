@@ -32,7 +32,8 @@ jobs:
         cluster: "97"
         host: https://dashboard.dev.getporter.dev
         installation_id: "22158312"
-        namespace: previewbranch-preview-branch-porter-dev-js-test-app
+        # namespace: previewbranch-preview-branch-porter-dev-js-test-app
+        namespace: stefan-says-no
         pr_branch_from: ${{ github.event.inputs.pr_branch_from }}
         pr_branch_into: ${{ github.event.inputs.pr_branch_into }}
         pr_id: ${{ github.event.inputs.pr_number }}
