@@ -1,15 +1,7 @@
-version: v1
-resources:
-- name: web
-  source:
-    name: web
-  config:
-    build:
-      method: pack
-      builder: heroku/buildpacks:20
-    values:
-      ingress:
-        enabled: false
-      container:
-        command: node index.js
-        port: 3000
+apps:
+  web:
+    run: npm start
+  worker:
+    run: launcher node index.js
+  worker-2:
+    run: node index.js
