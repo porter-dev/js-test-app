@@ -19,7 +19,7 @@ jobs:
         command: apply -f ./porter.yaml
       env:
         PORTER_CLUSTER: "2814"
-        PORTER_HOST: https://dashboard.getporter.dev
+        PORTER_HOST: https://dashboard-production.porter.run
         PORTER_PROJECT: "7694"
         PORTER_STACK_NAME: dgt
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
