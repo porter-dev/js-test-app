@@ -24,4 +24,4 @@ jobs:
         PORTER_PROJECT: 8
         PORTER_STACK_NAME: feroze-test-1
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-        PORTER_TOKEN: ${{ secrets.PORTER_STACK_8_11 }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_7_11 }}
