@@ -1,7 +1,7 @@
 "on":
   push:
     branches:
-    - feroze
+    - feroze-test-1
 name: Deploy to feroze-test-1
 jobs:
   porter-deploy:
@@ -9,11 +9,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-    - name: Setup Go
-      uses: actions/setup-go@v4
-      with:
-        go-version-file: go.mod
-        cache: false
     - name: Set Github tag
       id: vars
       run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
@@ -22,7 +17,7 @@ jobs:
       run: /bin/bash -c "$(curl -fsSL https://install.porter.run)"
     - name: Deploy stack
       timeout-minutes: 30
-      run: porter auth login --token $PORTER_TOKEN && go run ./cli/main.go apply
+      run: porter auth login --token $PORTER_TOKEN && porter apply
       env:
         PORTER_CLUSTER: 11
         PORTER_HOST: https://dashboard.getporter.dev
