@@ -17,7 +17,7 @@ jobs:
       run: /bin/bash -c "$(curl -fsSL https://install.porter.run)"
     - name: Deploy stack
       timeout-minutes: 30
-      run: porter auth login --token $PORTER_TOKEN && porter apply
+      run: porter apply
       env:
         PORTER_CLUSTER: 2698
         PORTER_HOST: https://dashboard.getporter.dev
