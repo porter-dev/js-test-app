@@ -2,7 +2,7 @@ on:
   push:
     branches:
     - feroze
-name: Deploy to Porter
+name: Deploy to porter_stack_pls-work-1
 jobs:
   porter-deploy:
     runs-on: ubuntu-latest
