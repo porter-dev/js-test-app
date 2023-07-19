@@ -1,7 +1,7 @@
 "on":
   push:
     branches:
-    - feroze-test-1
+    - feroze
 name: Deploy to feroze-test-1
 jobs:
   porter-deploy:
