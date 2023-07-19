@@ -15,6 +15,16 @@ jobs:
     - name: Install Porter
       timeout-minutes: 30
       run: /bin/bash -c "$(curl -fsSL https://install.porter.run)"
+    - name: Login
+      timeout-minutes: 30
+      run: porter auth login --token $PORTER_TOKEN
+      env:
+        PORTER_CLUSTER: 2698
+        PORTER_HOST: https://dashboard.getporter.dev
+        PORTER_PROJECT: 7224
+        PORTER_STACK_NAME: pls-work-1
+        PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_7224_2698 }}
     - name: Deploy stack
       timeout-minutes: 30
       run: porter apply
@@ -24,4 +34,4 @@ jobs:
         PORTER_PROJECT: 7224
         PORTER_STACK_NAME: pls-work-1
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-        PORTER_TOKEN: ${{ secrets.PORTER_STACK_7_11 }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_7224_2698 }}
