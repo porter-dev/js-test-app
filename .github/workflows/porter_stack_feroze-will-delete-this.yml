@@ -12,6 +12,8 @@ jobs:
     - name: Set Github tag
       id: vars
       run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+    - name: print env
+      run: printenv
     - name: Deploy stack
       timeout-minutes: 30
       uses: porter-dev/porter-cli-action@dev
