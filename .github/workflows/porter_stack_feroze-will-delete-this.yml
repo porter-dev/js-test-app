@@ -19,7 +19,7 @@ jobs:
         command: apply -f ./porter.yaml
       env:
         PORTER_CLUSTER: 11
-        PORTER_HOST: https://dashboard.getporter.dev
+        PORTER_HOST: https://dashboard.internal-tools.porter.run
         PORTER_PROJECT: 8
         PORTER_STACK_NAME: feroze-will-delete-this
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
