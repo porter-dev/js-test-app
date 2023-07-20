@@ -16,7 +16,7 @@ jobs:
       run: printenv
     - name: Deploy stack
       timeout-minutes: 30
-      uses: porter-dev/porter-cli-action@dev
+      uses: porter-dev/porter-cli-action@v0.1.0
       with:
         command: apply -f ./porter.yaml
       env:
