@@ -1,8 +1,8 @@
-on:
+"on":
   push:
     branches:
     - feroze
-name: Deploy to Porter
+name: Deploy to feroze-will-delete-this
 jobs:
   porter-deploy:
     runs-on: ubuntu-latest
@@ -14,13 +14,13 @@ jobs:
       run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     - name: Deploy stack
       timeout-minutes: 30
-      uses: porter-dev/porter-cli-action@dev
+      uses: porter-dev/porter-cli-action@v0.1.0
       with:
         command: apply -f ./porter.yaml
       env:
-        PORTER_CLUSTER: 11
-        PORTER_HOST: https://dashboard.getporter.dev
-        PORTER_PROJECT: 8
+        PORTER_CLUSTER: "11"
+        PORTER_HOST: https://dashboard.internal-tools.porter.run
+        PORTER_PROJECT: "8"
         PORTER_STACK_NAME: feroze-will-delete-this
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
         PORTER_TOKEN: ${{ secrets.PORTER_STACK_8_11 }}
