@@ -1,0 +1,5 @@
+apps:
+  web-dev:
+    run: node index.js
+release:
+  run: ls
