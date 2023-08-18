@@ -1,5 +1,5 @@
 apps:
-  web:
+  web-new:
     run: node index.js
 release:
   run: ls
