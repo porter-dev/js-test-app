@@ -1,5 +1,5 @@
-apps:
+version: v2
+name: hello-world
+services:
   web:
-    run: node index.js
-release:
-  run: ls
+    run: npmm start
