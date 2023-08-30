@@ -2,4 +2,4 @@ version: v2
 name: hello-world
 services:
   web:
-    run: npmm start
+    run: npm start
