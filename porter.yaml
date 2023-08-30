@@ -1,5 +1,5 @@
-apps:
+version: v2
+name: my-test-application
+services:
   web:
-    run: node index.js
-release:
-  run: ls
+    run: npm start
