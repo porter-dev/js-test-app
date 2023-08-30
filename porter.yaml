@@ -1,5 +1,5 @@
 version: v2
 name: my-cool-app
-apps:
+services:
   web:
     run: node index.js
