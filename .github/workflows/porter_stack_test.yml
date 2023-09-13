@@ -2,7 +2,7 @@
   push:
     branches:
     - porter
-name: Deploy to Porter
+name: Deploy to test
 jobs:
   porter-deploy:
     runs-on: ubuntu-latest
@@ -16,11 +16,11 @@ jobs:
       timeout-minutes: 30
       uses: porter-dev/porter-cli-action@v0.1.0
       with:
-        command: apply -f porter.yaml
+        command: apply -f ./porter.yaml
       env:
-        PORTER_CLUSTER: "2698"
+        PORTER_CLUSTER: "3009"
         PORTER_HOST: https://dashboard.getporter.dev
-        PORTER_PROJECT: "7224"
+        PORTER_PROJECT: "8506"
         PORTER_STACK_NAME: test
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-        PORTER_TOKEN: ${{ secrets.PORTER_STACK_7224_2698 }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_8506_3009 }}
