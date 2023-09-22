@@ -18,9 +18,9 @@ jobs:
       with:
         command: apply -f ./porter.yaml
       env:
-        PORTER_CLUSTER: "4"
+        PORTER_CLUSTER: "5"
         PORTER_HOST: https://rattler-immortal-worm.ngrok-free.app
         PORTER_PROJECT: "2"
         PORTER_STACK_NAME: test-git
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-        PORTER_TOKEN: ${{ secrets.PORTER_STACK_2_4 }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_2_5 }}
