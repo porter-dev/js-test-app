@@ -1,7 +1,6 @@
 version: v2
 services:
   web-new:
-    run: node index.js
     private: true
   job:
 release:
