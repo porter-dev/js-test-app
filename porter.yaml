@@ -3,6 +3,7 @@ services:
   web-new:
     private: true
     autoscaling:
+      enabled: true
   job:
 release:
   run: ls
