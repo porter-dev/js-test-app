@@ -2,6 +2,7 @@ version: v2
 services:
   web-new:
     private: true
+    autoscaling:
   job:
 release:
   run: ls
