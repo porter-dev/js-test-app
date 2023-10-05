@@ -3,5 +3,6 @@ services:
   web-new:
     run: node index.js
     private: true
+  job:
 release:
   run: ls
