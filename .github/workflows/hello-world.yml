@@ -2,7 +2,7 @@ name: hello-world
 on:
   push:
     tags:
-      - production
+      - app-integration-tests
 jobs:
   my-job:
     runs-on: ubuntu-latest
