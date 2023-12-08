@@ -1,0 +1,9 @@
+version: v2
+services:
+- name: app-web
+  run: bundle exec rails server
+  type: web
+  instances: 1
+  cpuCores: 0.38
+  ramMegabytes: 800
+  terminationGracePeriodSeconds: 30
