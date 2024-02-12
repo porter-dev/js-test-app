@@ -4,6 +4,6 @@ services:
   run: node index.js
   type: web
   instances: 1
-  cpuCores: 0.38
+  cpuCores: 0.4
   ramMegabytes: 800
   terminationGracePeriodSeconds: 30
