@@ -1,5 +1,5 @@
 version: v2
-name: test
+name: js-test-app-dockerfile
 services:
 - name: web
   run: node index.js
