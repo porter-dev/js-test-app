@@ -1,0 +1,12 @@
+version: v2
+name: test
+services:
+- name: web
+  run: node index.js
+  type: web
+build:
+  context: ./
+  method: docker
+  dockerfile: ./docker/Dockerfile
+predeploy:
+  run: ls
