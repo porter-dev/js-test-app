@@ -4,6 +4,7 @@ services:
 - name: web
   run: node index.js
   type: web
+  port: 3000
 build:
   context: ./
   method: pack
