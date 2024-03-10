@@ -16,12 +16,12 @@ jobs:
       uses: porter-dev/setup-porter@v0.1.0
     - name: Deploy stack
       timeout-minutes: 30
-      run: exec porter apply -f porter.yaml
+      run: exec porter apply
       env:
-        PORTER_CLUSTER: "3575"
+        PORTER_CLUSTER: "2918"
         PORTER_HOST: https://dashboard.getporter.dev
         PORTER_PR_NUMBER: ${{ github.event.number }}
-        PORTER_PROJECT: "11384"
+        PORTER_PROJECT: "8014"
         PORTER_STACK_NAME: tetris-app
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-        PORTER_TOKEN: ${{ secrets.PORTER_STACK_11384_3575 }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_8014_2918 }}
