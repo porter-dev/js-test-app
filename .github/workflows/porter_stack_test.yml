@@ -18,12 +18,12 @@ jobs:
       timeout-minutes: 30
       run: exec porter apply
       env:
-        PORTER_CLUSTER: "665"
-        PORTER_DEPLOYMENT_TARGET_ID: 058504db-fc52-4721-be15-76061253a68c
+        PORTER_CLUSTER: "819"
+        PORTER_DEPLOYMENT_TARGET_ID: a1125ff5-9dfb-4953-a74d-8d4fcce94181
         PORTER_HOST: https://cloud.porter.run
         PORTER_PR_NUMBER: ${{ github.event.number }}
-        PORTER_PROJECT: "667"
+        PORTER_PROJECT: "822"
         PORTER_REPO_NAME: ${{ github.event.repository.name }}
         PORTER_STACK_NAME: test
         PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-        PORTER_TOKEN: ${{ secrets.PORTER_STACK_667_665 }}
+        PORTER_TOKEN: ${{ secrets.PORTER_STACK_822_819 }}
