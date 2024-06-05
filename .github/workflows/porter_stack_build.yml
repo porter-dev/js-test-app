@@ -20,7 +20,7 @@ jobs:
       env:
         PORTER_CLUSTER: "2"
         PORTER_DEPLOYMENT_TARGET_ID: e1de38f5-0cfd-48a1-9323-da24c714272d
-        PORTER_HOST: https://rattler-immortal-worm.ngrok-free.app
+        PORTER_HOST: https://dgtown.getporter.dev
         PORTER_PR_NUMBER: ${{ github.event.number }}
         PORTER_PROJECT: "2"
         PORTER_REPO_NAME: ${{ github.event.repository.name }}
