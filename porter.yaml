@@ -1,5 +1,7 @@
 apps:
   web:
-    run: node index.js
-release:
-  run: ls
+    type: web
+    run: "node index.js" 
+  worker:
+    type: worker
+    run: "npm start-worker"
