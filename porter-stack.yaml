@@ -1,0 +1,41 @@
+version: v1stack # on launch, from the front-end, and on update, from the release
+
+# on launch, from the front-end, and on update, from the DB
+build:
+  method: pack
+  builder: heroku/buildpacks:20
+  context: './'
+
+# type Build struct {
+#   Context    *string   `yaml:"context" validate:"dir"`
+#   Method     *string   `yaml:"method" validate:"required,oneof=pack docker registry"`
+#   Builder    *string   `yaml:"builder" validate:"required_if=Method pack"`
+#   Buildpacks []*string `yaml:"buildpacks"`
+#   Dockerfile *string   `yaml:"dockerfile" validate:"required_if=Method docker"`
+#   Image      *string   `yaml:"image" validate:"required_if=Method registry"`
+# }
+
+env: # on launch, from the front-end, and on update, from the release
+  API_CLIENT_ID: foobar 
+  API_CLIENT_SECRET: foobaz
+
+# user specifies these
+apps:
+  web-1: 
+    run: launcher node index.js
+    config: # on launch, from the front-end and on update, from the release
+      resources:
+        requests:
+          cpu: 200m
+          memory: 256Mi
+    type: web # on launch, from the front-end and on update, from the release
+  web-2:
+    run: launcher node index.js
+    config: # on launch, from the front-end and on update, from the release
+      resources:
+        requests:
+          cpu: 200m
+          memory: 256Mi
+    type: web # on launch, from the front-end and on update, from the release
+
+release: yarn release
