@@ -1,0 +1,26 @@
+version: v2
+name: lab-app
+services:
+- name: web
+  run: node index.js
+  type: web
+  instances: 1
+  cpuCores: 0.16
+  ramMegabytes: 300
+  terminationGracePeriodSeconds: 30
+  port: 3000
+  healthCheck:
+    enabled: true
+    httpPath: /
+    timeoutSeconds: 1
+    initialDelaySeconds: 15
+  sleep: false
+build:
+  context: ./
+  method: docker
+  dockerfile: ./docker/Dockerfile
+env:
+- key: test
+  value: blah
+autoRollback:
+  enabled: false
