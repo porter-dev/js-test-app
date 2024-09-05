@@ -1,9 +1,18 @@
 version: v2
+name: test
 services:
-- name: app-web
+- name: web
   run: node index.js
   type: web
   instances: 1
-  cpuCores: 0.4
-  ramMegabytes: 800
+  cpuCores: 0.16
+  ramMegabytes: 300
   terminationGracePeriodSeconds: 30
+  port: 3000
+  sleep: false
+build:
+  context: ./
+  method: pack
+  builder: heroku/buildpacks:20
+autoRollback:
+  enabled: true
