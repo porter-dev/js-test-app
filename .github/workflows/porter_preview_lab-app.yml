@@ -12,7 +12,7 @@ name: Deploy to Preview Environment
 jobs:
   porter-deploy:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.pull_request.title, 'feat/')
+    if: startsWith(github.head_ref, 'feat/')
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
