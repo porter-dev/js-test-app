@@ -8,4 +8,4 @@ app.get('/', (req, res) => {
 });
 
 var sponsor = process.env.SPONSOR || "unsponsoredd";
-app.listen(3000, () => console.log('Tetris app is listening on port 3000. Brought to you by the one and only', sponsor + ", of course."));
+app.listen(3000, () => console.log('Tetris app is listening on port 3000! Brought to you by the one and only', sponsor + ", of course."));
