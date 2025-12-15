@@ -24,4 +24,4 @@ jobs:
                 PORTER_PR_NUMBER: ${{ github.event.number }}
                 PORTER_PROJECT: "9267"
                 PORTER_TAG: ${{ steps.vars.outputs.sha_short }}
-                PORTER_TOKEN: ${{ secrets.PORTER_APP_610_608 }}
+                PORTER_TOKEN: ${{ secrets.NEW_API_TOKEN }}
